@@ -14,6 +14,7 @@ a user will input data using a fourm and thus create a database of boats and mot
 * Bootstrap
 * Node
 * Express
+* Trello (https://trello.com/b/qqZB95ru/unit-2-project)
 
 
 ### Stretch Goals
