@@ -1,0 +1,23 @@
+
+<h1> Boat list PARRRTTTTYYYY </h1>
+
+<table id="list">
+    <thead>
+      <tr>
+        <th>Draft</th>
+        <th>Brand</th>
+        <th>Length</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% boats.forEach(function(m) { %>
+        <tr>
+          <td><%= m.draft %></td>
+          <td><%= m.brand %></td>
+          <td><%= m.length %></td>
+          <td><form action="/boats/<%= m._id %>?_method=DELETE" method="POST">
+          <button type="submit">X</button></form></td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>

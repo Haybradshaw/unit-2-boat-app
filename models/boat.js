@@ -5,18 +5,19 @@ var Schema = mongoose.Schema;
 var boatSchema = new Schema({
  
   brand: {
-    type: String, enum: ['Pescador', 'Stalker', 'SeaVee', 'Dusky'], default: 'Pescador'
+    type: String, 
+    // enum: ['Pescador', 'Stalker', 'SeaVee', 'Dusky']
   },
-  boatLength: {
-    type: Number, 
-    require: true,
-    min: 10,
-    max: 60
+  length: {
+    type: String, 
+    // require: true,
+    // min: 10,
+    // max: 60
   },
   draft: {
-    type: Number,
-    min: 3,
-    max: 60
+    type: String,
+    // min: 3,
+    // max: 60
   },
 });
 
