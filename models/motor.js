@@ -5,13 +5,16 @@ var Schema = mongoose.Schema
 
 var motorSchema = new Schema({
     HP: {
-      type: Number, enum: ['125', '150', '175', '200']
+      type: String,
+      //enum: ['125', '150', '175', '200']
     },
     cycle: {
-      type: String, enum: ['2 Stroke', '4 Stroke']
+      type: String, 
+      //enum: ['2 Stroke', '4 Stroke']
     },
-    Brand: {
-      type: String, enum: ['Yamaha','Suzuki','Mercury']
+    make: {
+      type: String
+      //enum: ['Yamaha','Suzuki','Mercury']
     }
   });
    

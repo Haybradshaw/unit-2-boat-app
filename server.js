@@ -49,6 +49,7 @@ app.use('/', indexRoutes);
 app.use('/', usersRoutes);
 app.use('/boats', boatsRouter);
 
+
 // invalid request, send 404 page
 app.use(function(req, res) {
   res.status(404).send('Cant find that!');
