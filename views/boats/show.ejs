@@ -29,7 +29,7 @@
             </div>
           </nav>
         </div>
-
+<h1>EDIT BOATS BELLOW</h1>
   <div class="row">
         <div class="col s12 m6">
           <div class="card blue-grey darken-1">
@@ -53,7 +53,10 @@
                     <span class="card-title">Motor</span>
                     <span class="white-text"><%= motor.HP %></span>
                     <span class="white-text"><%= motor.make %></span>
-                    <span class="white-text"><%= motor.cycle %></span>
+                    <span class="white-text"><%= motor.cycle %></span>    
+                    <div class="card-action">
+                        <a action="/boats/<%= motors._id %>?_method=DELETE" method="POST">delete</a>
+                      </div>           
                   </div>
                 </div>
               </div>

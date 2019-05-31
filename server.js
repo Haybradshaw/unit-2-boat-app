@@ -46,9 +46,9 @@ app.use(passport.session());
 
 
 // mount all routes with appropriate base paths
+app.use('/boats', boatsRouter);
 app.use('/', indexRoutes);
 app.use('/', usersRoutes);
-app.use('/boats', boatsRouter);
 app.use('/', motorsRouter);
 
 

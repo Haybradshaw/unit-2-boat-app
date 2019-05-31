@@ -11,12 +11,19 @@ module.exports = {
 };
 
 function show(req, res) {
-  Boat.findById(req.params.id).exec((err, boat) => {
-    Motor.find({ boat: boat._id }), function(err, motors){
-      res.render('boats/show', {boat, motors, user: req.user});
-    }
+  Boat.findById(req.params.id).exec(function(err, boat) {
+    Motor.find({boat: boat._id}, function(err, motors) {
+      res.render('boats/show', {boat, motors, user: req.user})
+    })
   })
+  // console.log('hello')
+  // Boat.findById(req.params.id).exec((err, boat) => {
+  //   Motor.find({ boat: boat._id }), function(err, motors){
+  //     res.render('boats/show', {boat, motors, user: req.user});
+  //   }
+  // })
 } 
+
 function index(req, res) {
   Boat.find({}, (err, boats) => {
     res.render('boats/index', {title: "All Boats", boats, user: req.user})
