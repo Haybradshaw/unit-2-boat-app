@@ -36,8 +36,7 @@ var boatSchema = new Schema({
     type: String,
     // min: 3,
     // max: 60
-  },
-  motor: [{type: Schema.Types.ObjectId, ref:'motor'}]
+  }
 });
 
 

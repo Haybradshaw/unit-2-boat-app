@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <title><%= title %></title>
+  <title>boat stuff</title>
   <!-- Google Icon Fonts used by Materialize -->
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Materialize CSS Framework -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="/stylesheets/style.css" />
   <!-- JavaScript for Materialize -->
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
-
 <body>
-    <div class="card-panel teal lighten-2">
   <div class="navbar-fixed">
     <nav>
       <div class="nav-wrapper">
@@ -31,30 +28,19 @@
       </div>
     </nav>
   </div>
-<table id="list">
-  <h1>boat</h1>
-    <thead>
-      <tr>
-        <th>Draft</th>
-        <th>Brand</th>
-        <th>Length</th>
-        <th>Details</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% boats.forEach(function(m) { %> 
-        <tr>
-          <td><%= m.draft %></td>
-          <td><%= m.brand %></td>
-          <td><%= m.length %></td>
-          <td><a href="/boats/<%= m._id %>" class="btn">Details</a></td>
-          <td><form action="/boats/<%= m._id %>?_method=DELETE" method="POST">
-            <button type="submit">X</button></form></td>
-          </tr>
-          <% }); %>
-        </tbody>
-      </table>
-    </div>
-</body>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-</html>
+<form id="new-form" action="/boats/<%= boatId%>/motors" method="POST">
+    <h2>Motor</h2>
+    <label>hp:</label>
+    <input type="text" name="HP">
+    <label>cycle:</label>
+    <input type="text" name="cycle">
+    <label>make</label>
+    <input type="text" name="make">
+    <input type="submit" value="Add Combination">
+  </form>
+  <br>
+  
+
+
+
+

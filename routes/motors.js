@@ -1,13 +1,12 @@
-// var express = require('express');
-// var router = express.Router();
-// var motorsCtrl =  require('../controllers/motors');
+var express = require('express');
+var router = express.Router();
+var motorsCtrl =  require('../controllers/motors');
 
 
-// router.get('/', motorsCtrl.index);
-// router.get('/new', motorsCtrl.new);
-// router.post('/', motorsCtrl.create);
-// router.delete('/:id', motorsCtrl.delMotor);
+router.post('/boats/:id/motors', motorsCtrl.create);
+router.get('/boats/:id/motors/new', motorsCtrl.newMotor);
 
 
 
-// module.exports = router;
+
+module.exports = router;
